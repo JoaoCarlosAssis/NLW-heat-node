@@ -6,3 +6,13 @@ datasource db {
 generator client {
   provider = "prisma-client-js"
 }
+
+model user {
+  id         String @id @default(uuid())
+  name       String
+  github_id  String
+  avatar_url String
+  login      String
+
+  @@map("users")
+}
